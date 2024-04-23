@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  babylon-node:
+    image: babylon-full-node:v0.8.5
+    container_name: babylon-node
+    volumes:
+      - ${BABYLON_DATA_HOST_PATH}:${DAEMON_HOME}
+    environment:
+      - DAEMON_HOME=${DAEMON_HOME}
+      - MONIKER=${MONIKER}
+      - DAEMON_NAME=${DAEMON_NAME}
+    ports:
+      - "26656:26656"
+    restart: unless-stopped
