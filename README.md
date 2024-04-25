@@ -16,7 +16,11 @@ Before starting, ensure you edit the `.env` file with appropriate values accordi
 ### `BABYLON_DATA_HOST_PATH`
 
 - **Description**: The location on the host machine where blockchain data and configuration are persisted. This can be a local filesystem path or a Docker volume, mounted through Docker Compose.
-- **Example**: `/persistent/host/path/.data/`
+- **Example**:
+
+              local path: `$HOME/.babylon-data/`
+
+              docker volume: `babylon-data`
 
 ### `MONIKER`
 
